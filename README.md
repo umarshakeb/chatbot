@@ -58,3 +58,17 @@ Clone the repository and create a `.env` file in the root directory:
 ```env
 PINECONE_API_KEY=your_pinecone_api_key_here
 GROQ_API_KEY=your_groq_api_key_here
+
+**2. Install Dependencies**
+pip install -r requirements.txt
+
+**3. Ingest Your Data**
+Place your PDF files into the /data directory. Then, initialize your vector database by running the ingestion script (Run this only once per dataset to avoid duplicate vectors):
+python store_index.py
+
+**4. Run the Chatbot Locally**
+Start the Flask application:
+python app.py
+
+**
+2. Install DependenciesGROQ_API_KEY=your_groq_api_key_here

@@ -70,4 +70,16 @@ python store_index.py
 ### 4. Run the Chatbot Locally
 Start the Flask application:
 python app.py
+Navigate to http://localhost:8080 in your browser to start chatting!
+
+## 🐳 Docker & AWS Deployment
+This application is packaged for cloud-native deployment.
+### 1. Build the Image:
+docker build -t rag-chatbot .
+
+### 2. Run the Container:
+docker run -d -p 8080:8080 --env-file .env rag-chatbot
+
+### AWS Deployment: Push the built image to AWS ECR, and pull it down to an AWS EC2 instance utilizing an IAM role with AmazonEC2ContainerRegistryReadOnly permissions.
+python app.py
 

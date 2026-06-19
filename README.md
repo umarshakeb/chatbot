@@ -58,6 +58,7 @@ Clone the repository and create a `.env` file in the root directory:
 ```env
 PINECONE_API_KEY=your_pinecone_api_key_here
 GROQ_API_KEY=your_groq_api_key_here
+```
 
 ### 2. Install Dependencies
 pip install -r requirements.txt

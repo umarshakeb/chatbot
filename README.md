@@ -80,6 +80,14 @@ docker build -t rag-chatbot .
 ### 2. Run the Container:
 docker run -d -p 8080:8080 --env-file .env rag-chatbot
 
-### AWS Deployment: Push the built image to AWS ECR, and pull it down to an AWS EC2 instance utilizing an IAM role with AmazonEC2ContainerRegistryReadOnly permissions.
+# AWS Deployment 
+Push the built image to AWS ECR, and pull it down to an AWS EC2 instance utilizing an IAM role with AmazonEC2ContainerRegistryReadOnly permissions.
+
+## 🗺️ Roadmap / Future Enhancements
+[ ] Conversational Memory: Integrate LangChain's create_history_aware_retriever to persist chat history across session states.
+
+[ ] Source Citations: Expose metadata["source"] and metadata["page"] in the UI to show exactly where the bot sourced its answers.
+
+[ ] Serverless Scaling: Migrate EC2 compute to AWS Fargate / ECS for zero-maintenance auto-scaling.
 python app.py
 
